@@ -1,6 +1,6 @@
 create table airports(
 	airport_code char(3) primary key,
-	airport_name varchar(30) not null,
+	airport_name varchar(100) not null,
 	city varchar(30) not null,
 	longitude float not null,
 	latitude float not null,
@@ -30,7 +30,7 @@ create table flights(
 	status varchar(20) not null,
 	aircraft_id integer references aircrafts(aircraft_id) on delete cascade on update cascade,
 	actual_departure timestamptz,
-	actuel_arrival timestamptz
+	actual_arrival timestamptz
 );
 
 create table aircrews(
